@@ -1,0 +1,27 @@
+## Visual Studio Build Artifacts
+[Bb]in/
+[Oo]bj/
+out/
+
+## Layers & Tooling
+# Ignore specific environment files in the Web layer
+src/**/appsettings.Development.json
+src/**/appsettings.Local.json
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+.vs/
+
+## Test Results
+TestResults/
+*.visualstudio.testsession
+
+## Clean Architecture / EF Core
+# DO NOT ignore .cs migration files, but you can ignore log files
+*.log
+
+# Ignore all files inside any folder named 'Configs'
+src/**/Configs/*.json
+**/Configs/*.json
