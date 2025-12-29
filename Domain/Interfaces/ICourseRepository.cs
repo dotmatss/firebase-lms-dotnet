@@ -12,5 +12,7 @@ namespace Domain.Interfaces
         Task<Course> GetByIdAsync(string id);
         Task UpdateAsync(Course course);
         Task AddAsync(Course course);
+
+        Task DeleteAsync(string id);
     }
 }

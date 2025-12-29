@@ -25,6 +25,11 @@ namespace Infrastructure.Repositories
                .SetAsync(new { course.Title, course.Description });
         }
 
+        public async Task DeleteAsync(string id)
+        {
+            await _firestoreDb.Collection("courses").Document(id).DeleteAsync();
+        }
+
         public async Task<Course> GetByIdAsync(string id)
         {
             var doc = await _firestoreDb.Collection("courses").Document(id).GetSnapshotAsync();

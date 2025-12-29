@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Application.DTOs;
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Application.Courses.Queries
 {
-    internal class GetCourseByIdQuery
+    public class GetCourseByIdQuery : IRequest<CourseDto>
     {
+        public string Id { get; set; }
     }
 }
