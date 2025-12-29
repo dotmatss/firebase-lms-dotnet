@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Application.Auth.Handlers
 {
-    public class RegisterUserHandler: IRequestHandler<RegisterUserCommand>
+    public class RegisterUserHandler : IRequestHandler<RegisterUserCommand>
     {
 
+        public Task Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
