@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Application.Courses.Commands
 {
-    public record UpdateCourseCommand : IRequest
-    {
-        public string CourseId { get; set; }
-        public string Title { get; init; }
-        public string Description { get; init; }
-    }
+    public record UpdateCourseCommand(
+        string CourseId,
+        string Title,
+        string Description
+    ) : IRequest;
 }

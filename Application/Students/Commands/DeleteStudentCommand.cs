@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Commands
 {
-    public class DeleteStudentCommand : IRequest
-    {
-        public string StudentId { get; set; }
-    }
+    public record DeleteStudentCommand(
+        string StudentId
+    ) : IRequest;
 }

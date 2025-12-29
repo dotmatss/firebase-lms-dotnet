@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Handlers
 {
-    public class UpdateStudentCommandHandler : IRequestHandler<UpdateStudentCommand>
+    public class UpdateStudentHandler : IRequestHandler<UpdateStudentCommand>
     {
         private readonly IStudentRepository _repo;
-        public UpdateStudentCommandHandler(Domain.Interfaces.IStudentRepository studentRepository)
+        public UpdateStudentHandler(Domain.Interfaces.IStudentRepository studentRepository)
         {
             _repo = studentRepository;
         }

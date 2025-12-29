@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Application.Courses.Handlers
 {
-    public class DeleteCourseCommandHandler : IRequestHandler<DeleteCourseCommand>
+    public class DeleteCourseHandler : IRequestHandler<DeleteCourseCommand>
     {
 
         private readonly ICourseRepository _courseRepository;
 
-        public DeleteCourseCommandHandler(ICourseRepository courseRepository)
+        public DeleteCourseHandler(ICourseRepository courseRepository)
         {
             _courseRepository = courseRepository;
         }

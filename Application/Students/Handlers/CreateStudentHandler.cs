@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Handlers
 {
-    public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand>
+    public class CreateStudentHandler : IRequestHandler<CreateStudentCommand>
     {
         private readonly IStudentRepository _repo;
 
-        public CreateStudentCommandHandler(IStudentRepository repo)
+        public CreateStudentHandler(IStudentRepository repo)
         {
             _repo = repo;
         }

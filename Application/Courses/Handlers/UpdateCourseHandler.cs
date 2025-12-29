@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Application.Courses.Handlers
 {
-    public class UpdateCourseCommandHandler : IRequestHandler<UpdateCourseCommand>
+    public class UpdateCourseHandler : IRequestHandler<UpdateCourseCommand>
     {
         private readonly ICourseRepository _courseRepository;
 
-        public UpdateCourseCommandHandler(ICourseRepository courseRepository)
+        public UpdateCourseHandler(ICourseRepository courseRepository)
         {
             _courseRepository = courseRepository;
         }

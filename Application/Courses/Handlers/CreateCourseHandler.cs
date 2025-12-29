@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Application.Courses.Handlers
 {
-    public class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, string>
+    public class CreateCourseHandler : IRequestHandler<CreateCourseCommand, string>
     {
         private readonly ICourseRepository _repo;
 
-        public CreateCourseCommandHandler(ICourseRepository repo)
+        public CreateCourseHandler(ICourseRepository repo)
         {
             _repo = repo;
         }

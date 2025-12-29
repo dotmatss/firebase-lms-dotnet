@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Application.Enrollments.Handlers
 {
-    public class EnrollStudentCommandHandler : IRequestHandler<EnrollStudentCommand>
+    public class EnrollStudentHandler : IRequestHandler<EnrollStudentCommand>
     {
         private readonly IStudentRepository _studentRepository;
         private readonly ICourseRepository _courseRepository;
         private readonly IEnrollmentRepository _enrollmentRepository;
 
-        public EnrollStudentCommandHandler(
+        public EnrollStudentHandler(
             IStudentRepository studentRepository,
             ICourseRepository courseRepository,
             IEnrollmentRepository enrollmentRepository)

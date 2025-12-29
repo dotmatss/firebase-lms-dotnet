@@ -7,9 +7,8 @@ using MediatR;
 
 namespace Application.Students.Commands
 {
-    public class CreateStudentCommand : IRequest
-    {
-        public string FullName { get; set; }
-        public string Email { get; set; }
-    }
+    public record CreateStudentCommand(
+        string FullName,
+        string Email
+    ) : IRequest;
 }

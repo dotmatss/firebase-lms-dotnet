@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Handlers
 {
-    public class DeleteStudentCommandHandler : IRequestHandler<DeleteStudentCommand>
+    public class DeleteStudentHandler : IRequestHandler<DeleteStudentCommand>
     {
         private readonly IStudentRepository _repo;
 
-        public DeleteStudentCommandHandler(IStudentRepository repo)
+        public DeleteStudentHandler(IStudentRepository repo)
         {
             _repo = repo;
         }
