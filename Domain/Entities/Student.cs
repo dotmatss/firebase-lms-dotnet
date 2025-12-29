@@ -50,5 +50,6 @@ namespace Domain.Entities
             var enrollment = new Enrollment(this, course);
             _enrollments.Add(enrollment);
         }
+
     }
 }

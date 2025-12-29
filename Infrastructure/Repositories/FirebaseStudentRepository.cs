@@ -20,11 +20,22 @@ namespace Infrastructure.Repositories
                 .SetAsync(new { student.Name, student.Email });
         }
 
+        public async Task DeleteAsync(string id)
+        {
+            await _firestoreDb.Collection("students").Document(id).DeleteAsync();
+        }
+
         public async Task<Student> GetByIdAsync(string id)
         {
             var doc = await _firestoreDb.Collection("students").Document(id).GetSnapshotAsync();
             if (!doc.Exists) return null;
             return doc.ConvertTo<Student>();
+        }
+
+        public async Task UpdateAsync(Student student)
+        {
+            await _firestoreDb.Collection("students").Document(student.Id)
+               .SetAsync(new { student.Name, student.Email }, SetOptions.MergeAll);
         }
     }
 }

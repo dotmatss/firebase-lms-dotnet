@@ -11,5 +11,9 @@ namespace Domain.Interfaces
     {
         Task<Student> GetByIdAsync(string id);
         Task AddAsync(Student student);
+
+        Task UpdateAsync(Student student);
+
+        Task DeleteAsync(string id);
     }
 }
