@@ -12,7 +12,7 @@ namespace Application.Students.Handlers
     public class UpdateStudentHandler : IRequestHandler<UpdateStudentCommand>
     {
         private readonly IStudentRepository _repo;
-        public UpdateStudentHandler(Domain.Interfaces.IStudentRepository studentRepository)
+        public UpdateStudentHandler(IStudentRepository studentRepository)
         {
             _repo = studentRepository;
         }

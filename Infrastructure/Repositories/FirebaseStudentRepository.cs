@@ -17,7 +17,7 @@ namespace Infrastructure.Repositories
         public async Task AddAsync(Student student)
         {
             await _firestoreDb.Collection("students").Document(student.Id)
-                .SetAsync(new { student.Name, student.Email });
+                .SetAsync(new { student.FullName });
         }
 
         public async Task DeleteAsync(string id)
@@ -35,7 +35,7 @@ namespace Infrastructure.Repositories
         public async Task UpdateAsync(Student student)
         {
             await _firestoreDb.Collection("students").Document(student.Id)
-               .SetAsync(new { student.Name, student.Email }, SetOptions.MergeAll);
+               .SetAsync(new { student.FullName }, SetOptions.MergeAll);
         }
     }
 }

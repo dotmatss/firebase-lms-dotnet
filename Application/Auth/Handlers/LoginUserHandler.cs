@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Application.Auth.Handlers
 {
-    public class LoginUserHandler : IRequestHandler<LoginUserCommand>
+    public class LoginUserHandler : IRequestHandler<LoginUserCommand, string>
     {
         public LoginUserHandler() {
 
         }
 
-        public Task Handle(LoginUserCommand request, CancellationToken cancellationToken)
+        Task<string> IRequestHandler<LoginUserCommand, string>.Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
